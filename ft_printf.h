@@ -6,7 +6,7 @@
 /*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 12:24:57 by mecauchy          #+#    #+#             */
-/*   Updated: 2022/12/21 14:26:00 by mecauchy         ###   ########.fr       */
+/*   Updated: 2022/12/23 17:27:08 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 #include <stdarg.h>
 
  int	ft_printf(const char *format, ...);
+ int	ft_print_exec(va_list arg, char *format);
 
 #endif
 
