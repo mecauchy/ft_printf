@@ -6,7 +6,7 @@
 /*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 12:24:57 by mecauchy          #+#    #+#             */
-/*   Updated: 2022/12/23 17:27:08 by mecauchy         ###   ########.fr       */
+/*   Updated: 2022/12/27 02:17:47 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,22 @@
 #include <string.h>
 #include <stdarg.h>
 
- int	ft_printf(const char *format, ...);
- int	ft_print_exec(va_list arg, char *format);
+int		ft_printf(const char *format, ...);
+int		ft_print_exec(va_list arg, char *format);
+int		ft_putnbr_base_p(unsigned long nbr);
+int		ft_putnbr_base_xx(unsigned int nbr);
+int		ft_putnbr_base_x(unsigned int nbr);
+int		ft_putnbr_u(unsigned int nb);
+int		ft_search_s(va_list arg);
+int		ft_search_p(va_list arg);
+int		ft_search_d_i(va_list arg);
+int		ft_search_xx(va_list arg);
+int		ft_search_x(va_list arg);
+int		ft_search_c(va_list arg);
+int		ft_search_u(va_list arg);
+int		ft_putchar(char c);
+void	ft_putnbr(int nb);
+void	ft_putstr(char *str);
 
 #endif
 

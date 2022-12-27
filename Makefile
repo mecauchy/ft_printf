@@ -1,4 +1,7 @@
-SRCS	=	ft_printf.c ft_print_exec.c
+SRCS	=	ft_printf.c ft_print_exec.c ft_putnbr_base_p.c ft_putnbr_base_xx.c \
+ ft_putnbr_base_x.c ft_putnbr_u.c ft_search_s.c ft_search_p.c ft_search_d_i.c \
+ ft_search_xx.c ft_search_x.c ft_search_c.c ft_search_u.c ft_putchar.c \
+  ft_putnbr.c ft_putstr.c
 
 OBJS	=	$(SRCS:.c=.o)
 
