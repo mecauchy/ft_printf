@@ -6,35 +6,32 @@
 /*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 02:10:17 by mecauchy          #+#    #+#             */
-/*   Updated: 2022/12/27 03:00:18 by mecauchy         ###   ########.fr       */
+/*   Updated: 2022/12/28 17:41:09 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
 int	ft_printf(const char *format, ...)
- {
+{
 	va_list	arg;
 	int		count;
+	int		i;
 
+	i = 0;
 	count = 0;
 	va_start(arg, format);
-	while (*format)
+	while (format[i])
 	{
-		if (*format == '%' && format + 1 && ...)
-			count += ft_print_exec(format + 1);
-		if (*format && *format != '%')
+		if (format[i] == '%' && format[i + 1])
 		{
-			ft_putchar(format);
-			format++;
-			count++;
+			count += ft_print_exec(arg, (char *)format + i + 1);
+			i += 1;
 		}
-		if (!(*format))
-		{
-			write(1, "(null)", 6);
-			va_end(arg);
-		}
+		else if (format[i] && format[i] != '%')
+			count += ft_putchar(format[i]);
+		i++;
 	}
 	va_end(arg);
 	return (count);
- }
+}

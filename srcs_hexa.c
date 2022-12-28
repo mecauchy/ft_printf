@@ -6,11 +6,11 @@
 /*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 00:51:31 by mecauchy          #+#    #+#             */
-/*   Updated: 2022/12/27 02:08:00 by mecauchy         ###   ########.fr       */
+/*   Updated: 2022/12/28 18:09:20 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_putnbr_base_p(unsigned long nbr)
 {
@@ -23,8 +23,8 @@ int	ft_putnbr_base_p(unsigned long nbr)
 	count = 0;
 	if (nb >= 16)
 	{
-		count += ft_putnbr_hex(nb / 16);
-		count += ft_putnbr_hex(nb % 16);
+		count += ft_putnbr_base_p(nb / 16);
+		count += ft_putnbr_base_p(nb % 16);
 	}
 	else
 	{
@@ -67,8 +67,8 @@ int	ft_putnbr_base_x(unsigned int nbr)
 	count = 0;
 	if (nb >= 16)
 	{
-		count += ft_putnbr_hex(nb / 16);
-		count += ft_putnbr_hex(nb % 16);
+		count += ft_putnbr_base_x(nb / 16);
+		count += ft_putnbr_base_x(nb % 16);
 	}
 	else
 	{

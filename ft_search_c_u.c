@@ -6,7 +6,7 @@
 /*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 02:52:41 by mecauchy          #+#    #+#             */
-/*   Updated: 2022/12/27 02:55:03 by mecauchy         ###   ########.fr       */
+/*   Updated: 2022/12/28 17:23:08 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,10 @@ int	ft_search_c(va_list arg)
 {
 	int		count;
 	char	c;
-	
+
 	count = 0;
 	c = (const char)va_arg(arg, int);
-	ft_putchar(c);
-	count++;//boucle infini ?
+	count += ft_putchar(c);
 	return (count);
 }
 
