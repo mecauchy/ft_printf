@@ -6,7 +6,7 @@
 #    By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/27 11:34:50 by mecauchy          #+#    #+#              #
-#    Updated: 2022/12/28 18:15:16 by mecauchy         ###   ########.fr        #
+#    Updated: 2023/01/08 19:17:31 by mecauchy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,6 @@ all		:	$(NAME)
 
 $(NAME)	:	$(OBJS)
 			ar rc $@ $^
-			ranlib $@
 
 main	:	all
 			$(CC) main.c libftprintf.a -o main

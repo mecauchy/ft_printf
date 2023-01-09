@@ -6,7 +6,7 @@
 /*   By: mecauchy <mecauchy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 00:52:42 by mecauchy          #+#    #+#             */
-/*   Updated: 2022/12/28 18:09:12 by mecauchy         ###   ########.fr       */
+/*   Updated: 2023/01/08 17:25:17 by mecauchy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ int	ft_search_p(va_list arg)
 	unsigned long	p;
 
 	p = (unsigned long)va_arg(arg, unsigned long);
+	if (!p)
+		return (ft_putstr("(nil)"));
 	count = ft_putstr("0x");
 	count += ft_putnbr_base_p(p);
 	return (count);
